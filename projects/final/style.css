@@ -1,0 +1,206 @@
+/* ===== COLOR PALETTE =====
+   Red:  #E03A3E
+   Gold: #FFD520
+   Black:#000000
+   Light Gray Background: #F4F4F4
+============================ */
+
+/* Global Typography & Layout */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #111111;
+    line-height: 1.7;
+    padding-top: 70px; /* space for fixed navbar */
+    background-color: #F4F4F4;
+}
+
+/* Links */
+a {
+    color: #E03A3E;
+    text-decoration: none;
+}
+a:hover {
+    color: #FFD520;
+    text-decoration: underline;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #000000 !important;
+}
+.navbar-brand {
+    color: #FFD520 !important;
+    letter-spacing: 0.03em;
+}
+.navbar-brand:hover {
+    color: #FFFFFF !important;
+}
+.nav-link {
+    color: #FFFFFF !important;
+    font-weight: 500;
+}
+.nav-link:hover {
+    color: #FFD520 !important;
+}
+
+/* ===== TOPPER ===== */
+.topper {
+    background: url('your-topper-image.jpg') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topper .overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(224, 58, 62, 0.7)
+    );
+    position: absolute;
+    inset: 0;
+}
+
+.topper-title {
+    position: relative;
+    color: #FFD520;
+    font-size: 3rem;
+    text-align: center;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== SECTION TITLES & TEXT ===== */
+.section-title {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #E03A3E;
+    border-left: 6px solid #FFD520;
+    padding-left: 0.6rem;
+}
+
+.body-text {
+    font-size: 1.05rem;
+    margin-top: 0.8rem;
+    color: #111111;
+}
+
+/* Blockquotes */
+.blockquote {
+    background: #FFFFFF;
+    border-radius: 6px;
+    border-left: 6px solid #E03A3E !important;
+}
+.blockquote p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* ===== PHOTOS & INTERACTIONS ===== */
+.caption {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #555555;
+    margin-top: 0.5rem;
+}
+
+/* Card-like wrapper for photos */
+.photo-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Interactive photo: zoom on hover */
+.interactive-photo {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+.photo-card:hover .interactive-photo {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
+
+/* Modal background tweak for cohesion */
+.modal-content {
+    background-color: #000000;
+    border: 2px solid #FFD520;
+}
+
+/* ===== DATA VISUALIZATION ===== */
+.bar-chart {
+    max-width: 650px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.bar {
+    margin-bottom: 15px;
+}
+
+.bar-label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    color: #000000;
+}
+
+/* Red-to-gold gradient bars */
+.bar-fill {
+    height: 22px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #E03A3E, #FFD520);
+}
+
+/* ===== BUTTONS & INTERACTIVE BOX ===== */
+.btn-dark {
+    background-color: #E03A3E;
+    border-color: #E03A3E;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.btn-dark:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFD520;
+}
+
+#factBox {
+    background-color: #FFFFFF;
+    border-color: #E03A3E !important;
+}
+#factBox strong {
+    color: #E03A3E;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #000000;
+    border-top: 3px solid #FFD520;
+    color: #FFFFFF;
+}
+.footer a {
+    color: #FFD520;
+    font-weight: 600;
+}
+.footer a:hover {
+    color: #FFFFFF;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .topper-title {
+        font-size: 2rem;
+    }
+}
