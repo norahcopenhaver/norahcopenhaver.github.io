@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Portfolio</title>
+
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="logo">Norah Copenhaver<span> Photography</span></div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Capturing Moments in Red & Black</h1>
+      <p>Sports, portraits, and everything in between.</p>
+      <a href="#portfolio" class="btn-primary">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section portfolio">
+    <div class="section-header">
+      <h2>Portfolio</h2>
+      <p>A selection of my favorite shots.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="portraits">Portraits</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <div class="gallery">
+      <figure class="gallery-item" data-category="sports">
+        <img src="img/gallery1.jpg" alt="Sports photo 1" />
+        <figcaption>Game-winning moment</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="sports">
+        <img src="img/gallery2.jpg" alt="Sports photo 2" />
+        <figcaption>Locked-in focus</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="portraits">
+        <img src="img/gallery3.jpg" alt="Portrait photo 1" />
+        <figcaption>Natural light portrait</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="portraits">
+        <img src="img/gallery4.jpg" alt="Portrait photo 2" />
+        <figcaption>Studio-style drama</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="events">
+        <img src="img/gallery5.jpg" alt="Event photo 1" />
+        <figcaption>Energy in the crowd</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="events">
+        <img src="img/gallery6.jpg" alt="Event photo 2" />
+        <figcaption>Under the stadium lights</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="section-header">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm a photographer based in College Park, Maryland, specializing in sports, portraits, and event coverage. 
+          I love freezing fast-paced action and small details that people might miss in the moment.
+        </p>
+        <p>
+          Whether it’s a packed stadium, a quiet sideline, or a candid portrait, my goal is to tell real stories through bold, clean imagery.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years shooting</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Events covered</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Shots taken</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <p>Reach out for shoots, collaborations, or assignments.</p>
+    </div>
+    <div class="contact-content">
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="type">Project Type</label>
+          <select id="type" name="type">
+            <option value="sports">Sports</option>
+            <option value="portraits">Portraits</option>
+            <option value="events">Events</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <p class="form-note">* This form is a front-end demo. Hook it up to email or a backend to receive messages.</p>
+      </form>
+
+      <div class="contact-info">
+        <h3>Booking & Inquiries</h3>
+        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/" target="_blank">@yourhandle</a></p>
+        <p>Based in: College Park, MD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Norah Copenhaver Photography. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
