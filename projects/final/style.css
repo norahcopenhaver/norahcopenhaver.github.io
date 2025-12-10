@@ -1,20 +1,13 @@
-/* ===== COLOR PALETTE =====
-   Red:  #E03A3E
-   Gold: #FFD520
-   Black:#000000
-   Light Gray Background: #F4F4F4
-============================ */
 
-/* Global Typography & Layout */
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     color: #111111;
     line-height: 1.7;
-    padding-top: 70px; /* space for fixed navbar */
+    padding-top: 70px; 
     background-color: #F4F4F4;
 }
 
-/* Links */
+
 a {
     color: #E03A3E;
     text-decoration: none;
@@ -24,7 +17,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
     background: #000000 !important;
 }
@@ -43,7 +36,7 @@ a:hover {
     color: #FFD520 !important;
 }
 
-/* ===== TOPPER ===== */
+
 .topper {
     background: url('your-topper-image.jpg') center/cover no-repeat;
     height: 60vh;
@@ -74,7 +67,7 @@ a:hover {
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* ===== SECTION TITLES & TEXT ===== */
+
 .section-title {
     font-weight: 800;
     margin-bottom: 1rem;
@@ -91,7 +84,7 @@ a:hover {
     color: #111111;
 }
 
-/* Blockquotes */
+
 .blockquote {
     background: #FFFFFF;
     border-radius: 6px;
@@ -101,8 +94,6 @@ a:hover {
     margin: 0;
     font-style: italic;
 }
-
-/* ===== PHOTOS & INTERACTIONS ===== */
 .caption {
     font-size: 0.9rem;
     text-align: center;
@@ -110,7 +101,7 @@ a:hover {
     margin-top: 0.5rem;
 }
 
-/* Card-like wrapper for photos */
+
 .photo-card {
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -120,7 +111,7 @@ a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* Interactive photo: zoom on hover */
+
 .interactive-photo {
     transition: transform 0.25s ease, filter 0.25s ease;
 }
@@ -129,13 +120,12 @@ a:hover {
     filter: brightness(1.05);
 }
 
-/* Modal background tweak for cohesion */
+
 .modal-content {
     background-color: #000000;
     border: 2px solid #FFD520;
 }
 
-/* ===== DATA VISUALIZATION ===== */
 .bar-chart {
     max-width: 650px;
     background: #FFFFFF;
@@ -155,14 +145,14 @@ a:hover {
     color: #000000;
 }
 
-/* Red-to-gold gradient bars */
+
 .bar-fill {
     height: 22px;
     border-radius: 999px;
     background: linear-gradient(90deg, #E03A3E, #FFD520);
 }
 
-/* ===== BUTTONS & INTERACTIVE BOX ===== */
+
 .btn-dark {
     background-color: #E03A3E;
     border-color: #E03A3E;
@@ -184,7 +174,7 @@ a:hover {
     color: #E03A3E;
 }
 
-/* ===== FOOTER ===== */
+
 .footer {
     background: #000000;
     border-top: 3px solid #FFD520;
@@ -198,7 +188,7 @@ a:hover {
     color: #FFFFFF;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
     .topper-title {
         font-size: 2rem;
