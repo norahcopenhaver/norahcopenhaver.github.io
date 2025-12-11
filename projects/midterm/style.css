@@ -1,100 +1,196 @@
-/* -----------------------------
-   GLOBAL TYPOGRAPHY & COLORS
------------------------------ */
+/* ============================
+   GLOBAL STYLES & TYPOGRAPHY
+   ============================ */
+
+:root {
+    --bg: #FDEFD7;
+    --blue: #116AB3;
+    --pink: #AD1A64;
+    --black: #030301;
+    --teal: #08706F;
+    --orange: #E94613;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fafafa;
-    color: #222;
-    line-height: 1.65;
+    font-family: "Inter Tight", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--bg);
+    color: var(--black);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+/* Basic headings */
+h1 {
     font-weight: 700;
-    color: #111;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--black);
+    margin: 1.5rem 0 1rem;
 }
 
+h2, h3 {
+    font-weight: 700;
+    color: var(--black);
+    margin: 1.5rem 0 0.75rem;
+}
+
+/* Lead paragraph at the top of the article */
 .lead {
     font-size: 1.25rem;
     font-weight: 400;
-    max-width: 800px;
+    margin-bottom: 1.5rem;
 }
 
-/* Accent color for headings (optional) */
-h1 {
-    border-left: 5px solid #d23a3a;
-    padding-left: 12px;
-}
-
-/* -----------------------------
-   LAYOUT
------------------------------ */
-.container.layout {
-    max-width: 820px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-/* Article text spacing */
-.article p {
-    margin-bottom: 1.25rem;
-    font-size: 1.05rem;
-}
-
-/* -----------------------------
-   IMAGES & FIGURES
------------------------------ */
-figure {
-    margin: 2.5rem 0;
-    text-align: center;
-}
-
-figure img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: #555;
-}
-
-/* If multiple images appear side by side */
-figure .row img {
-    border-radius: 8px;
-}
-
-/* -----------------------------
-   LINKS
------------------------------ */
+/* Links */
 a {
-    color: #d23a3a;
-    text-decoration: none;
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.15em;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--pink);
 }
 
-/* -----------------------------
-   MOBILE RESPONSIVENESS
------------------------------ */
-@media (max-width: 768px) {
-    body {
-        padding: 0 1rem;
+/* ============================
+   LAYOUT / CONTAINERS
+   ============================ */
+
+/* New concept: resize your containers */
+.container {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Article wrapper */
+.article {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Generic paragraph styling */
+.article p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ============================
+   IMAGES & FIGURES
+   ============================ */
+
+figure {
+    margin: 2rem 0;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: rgba(3, 3, 1, 0.7);
+    margin-top: 0.5rem;
+}
+
+/* For the placeholders you added earlier (optional) */
+.image-placeholder {
+    text-align: center;
+}
+
+/* ============================
+   CHART HEADINGS / LABELS
+   ============================ */
+
+/* Big chart headline in the article */
+.chart-hed {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pink);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle/description for charts */
+.chart-subhed {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--teal);
+    margin-bottom: 1.5rem;
+}
+
+/* Optional: a wrapper if you add <div class="chart"> around chart sections */
+.chart {
+    margin: 2rem 0;
+}
+
+/* Make iframe chart at the bottom behave nicely */
+.chart-embed iframe {
+    display: block;
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+/* ============================
+   MEDIA QUERIES
+   ============================ */
+
+/* At a max width of 950px:
+   - .container AND .container-fluid => 75%
+   - p tags only within .chart: padding-top: 1em, font-size: 1.25em, centered
+*/
+@media (max-width: 950px) {
+    .container,
+    .container-fluid {
+        width: 75%;
+    }
+
+    .chart p {
+        padding-top: 1em;
+        font-size: 1.25em;
+        text-align: center;
+    }
+}
+
+/* At a max width of 556px:
+   - .container AND .container-fluid => 95%
+   - Make h1 smaller
+   - .chart-hed smaller (1.75em) + padding top/bottom 1em
+   - Add padding to img’s only in the .chart blocks (2em)
+*/
+@media (max-width: 556px) {
+    .container,
+    .container-fluid {
+        width: 95%;
     }
 
     h1 {
         font-size: 1.8rem;
     }
 
-    .lead {
-        font-size: 1.15rem;
+    .chart-hed {
+        font-size: 1.75em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+
+    .chart img {
+        padding: 2em;
     }
 }
